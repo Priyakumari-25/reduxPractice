@@ -1,8 +1,8 @@
 import React from "react";
-const Home = () => {
+const Home = (props) => {
+  console.log('pppp',props)
   return (
     <div>
-        <div></div>
       <h1>home</h1>
       <div className="cart-wrapper">
         <div className=" img-wrapper item">
@@ -13,8 +13,14 @@ const Home = () => {
           <span>Price : $1000.00</span>
         </div>
         <div className=" btn-wrapper item">
-          <button>Add To cart</button>
+          <button 
+          onClick={()=>props.addToCartHandler({price:1000,name:'i phone'})}
+          >Add To cart</button>
+          <button className="remove"
+          onClick={()=>props.removeToCartHandler()}
+          >Remove To cart</button>
         </div>
+        
       </div>
     </div>
   );
