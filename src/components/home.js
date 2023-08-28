@@ -2,6 +2,7 @@ import React from "react";
 const Home = () => {
   return (
     <div>
+        <div></div>
       <h1>home</h1>
       <div className="cart-wrapper">
         <div className=" img-wrapper item">
